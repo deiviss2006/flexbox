@@ -1,0 +1,291 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0d68a;
+  padding: 20px;
+}
+
+h1 {
+  background-color: #7ea3d4;
+  padding: 10px;
+  margin: 0;
+  color: white;
+}
+
+.menu {
+  background-color: #d1d1d1;
+  padding: 10px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu ul li {
+  padding: 10px 20px;
+  background-color: #d1d1d1;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu ul li:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+.menu ul li:hover a {
+  color: white;
+}
+
+.menu li ul {
+  display:none;
+  position:absolute;
+  min-width:140px;
+}
+
+.menu li:hover > ul {
+  display:block;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.text-content {
+  flex: 1;
+  background-color: #f6c5ab;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.courses {
+  flex: 2;
+  background-color: #e5e5e5;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.course-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #FFA500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #e68900;
+}
+
+.course-item a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.course-item img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.profesores {
+  margin-bottom: 20px;
+}
+
+.profesores-contenedor {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.profesores-contenedor > div {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.profesores-contenedor img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.profesores-contenedor .perfil p {
+  font-weight: bold;
+}
+
+.profesores-contenedor .logros p {
+  color: #2c8c2b;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.cursos-contenedor {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cursos-contenedor .curso {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cursos-contenedor .curso h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.cursos-contenedor .curso p {
+  margin: 5px 0;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .cursos-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cursos-contenedor .curso {
+    flex: none;
+    width: 80%;
+  }
+}
+
+footer {
+  background-color: #666;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+footer > div {
+  margin: 0 20px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu ul li {
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .intro {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content,
+  .courses {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .course-item {
+    margin-bottom: 10px;
+  }
+
+  .profesores-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profesores-contenedor > div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .cursos-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cursos-contenedor .curso {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer > div {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu li ul {
+    position: static;
+  }
+
+  .menu ul li {
+    width: 100%;
+  }
+
+  .menu li ul li {
+    padding-left: 20px;
+  }
+}
+
+
